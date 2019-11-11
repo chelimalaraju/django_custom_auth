@@ -1,0 +1,14 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Login Success" %}{% endblock %}
+{% block content %}
+{% url 'auth_password_change' as auth_pwd_change_url %}
+{% url 'auth_logout' as logout_url%}
+{% blocktrans %}
+Thanks, login success.
+{% endblocktrans %}
+<p>{% blocktrans %}<a href="{{ auth_pwd_change_url }}">Change</a> your password.
+    <a href="{{ logout_url }}">Logout from your account</a>{% endblocktrans %}</p>
+{% endblock %}
+
+

@@ -1,0 +1,10 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Logged out" %}{% endblock %}
+{% block content %}
+{% trans "Successfully logged out!" %}
+{% url 'auth_login' as auth_login_url %}
+{% blocktrans %}
+If you want  <a href='{{ auth_login_url }}'>login</a>.
+{% endblocktrans %}
+{% endblock %}
